@@ -1,3 +1,3 @@
 # With-Kerouac
 
-An computational poetry exploration using a poem by Jack Kerouac.
+An exploration of computational poetry using a poem by Jack Kerouac.
