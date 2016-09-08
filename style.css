@@ -3,6 +3,12 @@ body {
     margin: 50px;
     background: #9D8780;
     color: #C5BC92;
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 1.5em;
+}
+
+h1 {
+    font-weight: normal;
 }
 
 canvas {
@@ -13,8 +19,14 @@ canvas {
     padding: 20px;
     background: #BCBDC5;
     color: #000000;
+    border: solid 2px #BCBDC5;
+}
+
+#editableP:focus {
+    outline: none;
+    border: solid 2px #000000;
 }
 
 #output {
-    font-size: 2em;
+    font-size: 1.5em;
 }
