@@ -1,0 +1,10 @@
+body {
+    padding: 0;
+    margin: 50px;
+    background: #9D8780;
+    color: #C5BC92;
+}
+
+canvas {
+    vertical-align: top;
+}
