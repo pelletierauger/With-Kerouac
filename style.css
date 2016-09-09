@@ -1,3 +1,7 @@
+body {
+    background: #98841E;
+}
+
 #wrapper {
     display: block;
     float: left;
@@ -40,7 +44,7 @@ canvas {
     background: #9D3838;
 }
 
-@media (min-device-width: 1180px) {
+@media (min-width: 1180px) {
     #leftColumn {
         display: block;
         font-size: 1.5em;
@@ -48,6 +52,9 @@ canvas {
         float: left;
         margin-right: 5%;
         background: #3C803A;
+    }
+    canvas {
+        width: 100%;
     }
 }
 
