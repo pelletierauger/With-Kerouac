@@ -9,9 +9,12 @@ var mashDrawn = true;
 var chunkArray = ["test", "test"];
 var ctx;
 var parentTree;
+var leftColumn;
 
 function setup() {
     parentTree = select("#tree");
+    leftColumn = select("#leftColumn");
+
     canvas = createCanvas(parentTree.width, parentTree.width * 9 / 16);
     ctx = canvas.drawingContext;
     canvas.parent("#tree");

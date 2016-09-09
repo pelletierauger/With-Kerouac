@@ -76,10 +76,11 @@ canvas {
     }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 900px) {
     h1 {
         font-weight: normal;
         margin-top: 0;
+        font-size: 2em;
     }
     #leftColumn {
         display: block;
