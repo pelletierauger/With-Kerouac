@@ -2,9 +2,9 @@ body {
     padding: 0;
     margin: 50px;
     background: #9D8780;
-    color: #C5BC92;
-    font-family: 'Sorts Mill Goudy', serif;
-    font-size: 1.5em;
+    color: #000;
+    font-family: 'Sorts Mill Goudy', 'Baskerville', Georgia, serif;
+    font-size: 1.25em;
 }
 
 h1 {
@@ -27,6 +27,56 @@ canvas {
     border: solid 2px #000000;
 }
 
-#output {
+#leftColumn {
+    display: block;
     font-size: 1.5em;
+    width: 50%;
+    float: left;
+}
+
+#tree {
+    display: block;
+    float: left;
+}
+
+#selfdocumenting {
+    display: block;
+    float: left;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+#explanation {
+    display: block;
+    float: left;
+    width: 70%;
+    font-size: 0.7em;
+}
+
+#buttoncontainer {
+    display: block;
+    float: right;
+    width: 30%;
+}
+
+#mashButton {
+    display: inline-block;
+    float: left;
+    background: #C54558;
+    padding: 10px 20px;
+    color: #000;
+    border: solid 2px #000000;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently not supported by any browser */
 }
