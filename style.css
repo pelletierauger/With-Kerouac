@@ -1,6 +1,6 @@
 body {
     /*background: #98841E;*/
-    background: #9D8780;
+    background: #fff;
 }
 
 #wrapper {
@@ -122,6 +122,7 @@ canvas {
     padding-right: 1em;
     padding-bottom: 1em;
     border-bottom: solid 2px #000;
+    text-align: center;
     /*height: 7em;*/
 }
 
@@ -136,10 +137,11 @@ canvas {
 
 #mashButton {
     display: inline-block;
+    font-size: 1.5em;
     /*float: left;*/
     background: #C54558;
     padding: 10px 20px;
-    color: #000;
+    color: #fff;
     border: solid 2px #000000;
     cursor: pointer;
     -webkit-touch-callout: none;

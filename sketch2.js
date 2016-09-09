@@ -12,7 +12,7 @@ var parentTree;
 
 function setup() {
     parentTree = select("#tree");
-    canvas = createCanvas(parentTree.width, parentTree.width * 3 / 4);
+    canvas = createCanvas(parentTree.width, parentTree.width * 9 / 16);
     ctx = canvas.drawingContext;
     canvas.parent("#tree");
 
@@ -29,7 +29,7 @@ function setup() {
 }
 
 function windowResized() {
-    resizeCanvas(parentTree.width, parentTree.width * 3 / 4);
+    resizeCanvas(parentTree.width, parentTree.width * 9 / 16);
     mashDrawn = false;
 }
 
@@ -51,14 +51,14 @@ function mash() {
     textOutput.html(chunks);
     currentMash = chunks;
     mashDrawn = false;
-    console.log("mashDrawn is now false!");
+    // console.log("mashDrawn is now false!");
 }
 
 function draw() {
     console.log(parentTree.width);
     translate(width / 2, height);
     if (!mashDrawn) {
-        console.log("Drawing the mash!");
+        // console.log("Drawing the mash!");
         // var gradient = ctx.createLinearGradient(0, -height, 0, 0);
         // gradient.addColorStop(0, "rgba(180,80,30,255)");
         // gradient.addColorStop(1, "rgba(130,0,30,255)");
@@ -66,7 +66,7 @@ function draw() {
         // rect(-width / 2, -height, width, height);
         // fill(235, 235, 150);
         // background(30, 60, 90);
-        background(50);
+        background(70, 50, 50);
         recursiveTree({
             pos: createVector(0, 0),
             angle: PI / 2 * 3,
@@ -113,7 +113,7 @@ function recursiveTree(branch) {
         newText.shift();
         recursiveTree({
             pos: createVector(newX, newY),
-            angle: newAngle + random(-0.6, 0.6),
+            angle: newAngle + random(-0.9, 0.9),
             hyp: branch.hyp * 0.9,
             text: newText
         });
