@@ -1,10 +1,13 @@
-body {
+#wrapper {
+    display: block;
+    float: left;
     padding: 0;
-    margin: 50px;
+    margin: 3%;
     background: #9D8780;
     color: #000;
     font-family: 'Sorts Mill Goudy', 'Baskerville', Georgia, serif;
     font-size: 1.25em;
+    /*border: solid 2px red;*/
 }
 
 h1 {
@@ -13,6 +16,7 @@ h1 {
 
 canvas {
     vertical-align: top;
+    margin: 0 auto;
 }
 
 #editableP {
@@ -30,8 +34,21 @@ canvas {
 #leftColumn {
     display: block;
     font-size: 1.5em;
-    width: 50%;
+    width: 100%;
     float: left;
+    margin-right: 5%;
+    background: #9D3838;
+}
+
+@media (min-device-width: 1180px) {
+    #leftColumn {
+        display: block;
+        font-size: 1.5em;
+        width: 45%;
+        float: left;
+        margin-right: 5%;
+        background: #3C803A;
+    }
 }
 
 #tree {
@@ -44,6 +61,7 @@ canvas {
     float: left;
     width: 100%;
     margin-top: 1em;
+    /*padding-right: 5em;*/
 }
 
 #output {
@@ -56,20 +74,22 @@ canvas {
 #explanation {
     display: block;
     float: left;
-    width: 65%;
+    width: 100%;
     font-size: 0.7em;
-    padding-right: 5%;
+    padding-right: 5em;
 }
 
 #buttoncontainer {
+    /*width: 30%;*/
     display: block;
-    float: right;
-    width: 30%;
+    margin: 0 auto;
+    /*float: center;*/
+    background: #8CC5B6;
 }
 
 #mashButton {
     display: inline-block;
-    float: left;
+    /*float: left;*/
     background: #C54558;
     padding: 10px 20px;
     color: #000;

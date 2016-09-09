@@ -10,14 +10,14 @@ var chunkArray = ["test", "test"];
 var ctx;
 
 function setup() {
-    canvas = createCanvas(500, 500);
+    canvas = createCanvas(550, 600);
     ctx = canvas.drawingContext;
     canvas.parent("#tree");
     // background(150, 70, 70);
     background(50);
     noStroke();
     fill(235, 235, 150);
-    textFont("Sorts Mill Goudy");
+    textFont("'Sorts Mill Goudy', 'Baskerville', Georgia, serif");
     textSize(25);
     loadStrings('sounds-in-the-woods.txt', pickString);
     var mashButton = select('#mashButton')
