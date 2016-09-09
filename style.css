@@ -17,6 +17,7 @@ body {
 
 h1 {
     font-weight: normal;
+    margin-top: 0;
 }
 
 canvas {
