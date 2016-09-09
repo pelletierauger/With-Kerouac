@@ -35,22 +35,24 @@ canvas {
     border: solid 2px #000000;
 }
 
-#leftColumn {
-    display: block;
-    font-size: 1.5em;
-    width: 100%;
-    float: left;
-    margin-right: 5%;
-    background: #9D3838;
+@media screen and (min-width: 0px) {
+    #leftColumn {
+        display: block;
+        font-size: 2em;
+        width: 100%;
+        float: left;
+        /*margin-right: 5%;*/
+        background: #9D3838;
+    }
 }
 
-@media (min-width: 1180px) {
+@media screen and (min-width: 1100px) {
     #leftColumn {
         display: block;
         font-size: 1.5em;
-        width: 45%;
+        width: 25%;
         float: left;
-        margin-right: 5%;
+        margin-right: 2%;
         background: #3C803A;
     }
     canvas {
