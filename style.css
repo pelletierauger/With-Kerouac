@@ -1,5 +1,6 @@
 body {
-    background: #98841E;
+    /*background: #98841E;*/
+    background: #9D8780;
 }
 
 #wrapper {
@@ -7,7 +8,7 @@ body {
     float: left;
     padding: 0;
     margin: 1.5%;
-    background: #9D8780;
+    /*background: #9D8780;*/
     color: #000;
     font-family: 'Sorts Mill Goudy', 'Baskerville', Georgia, serif;
     font-size: 1em;
@@ -19,8 +20,16 @@ h1 {
 }
 
 canvas {
-    vertical-align: top;
+    display: block;
     margin: 0 auto;
+    /*width: 100%;*/
+    /*float: left;*/
+    position: relative;
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 #editableP {
@@ -41,8 +50,28 @@ canvas {
         font-size: 2em;
         width: 100%;
         float: left;
+        margin-bottom: 1em;
         /*margin-right: 5%;*/
-        background: #9D3838;
+        /*background: #9D3838;*/
+    }
+    #tree {
+        display: block;
+        float: left;
+        width: 100%;
+        /*background: red;*/
+    }
+    #buttoncontainer {
+        width: 100%;
+        display: block;
+        /*position: relative;*/
+        /*margin: 0 auto 2em auto;*/
+        /*float: center;*/
+        background: #8CC5B6;
+        /* top: 0;
+ left: 0;
+ bottom: 0;
+ right: 0;
+*/
     }
 }
 
@@ -53,17 +82,31 @@ canvas {
         width: 20%;
         float: left;
         margin-right: 2%;
-        background: #3C803A;
+        /*background: #3C803A;*/
     }
     /*    canvas {
         width: 100%;
     }
-*/
-}
 
-#tree {
-    display: block;
-    float: left;
+*/
+    #tree {
+        display: block;
+        float: left;
+        width: 78%;
+        /*background: red;*/
+    }
+    #buttoncontainer {
+        /*width: 30%;*/
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        /*float: center;*/
+        background: #8CC5B6;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
 }
 
 #selfdocumenting {
@@ -89,14 +132,6 @@ canvas {
     font-size: 1em;
     padding-right: 5em;
     margin-bottom: 1em;
-}
-
-#buttoncontainer {
-    /*width: 30%;*/
-    display: block;
-    margin: 0 auto;
-    /*float: center;*/
-    background: #8CC5B6;
 }
 
 #mashButton {

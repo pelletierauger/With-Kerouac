@@ -10,7 +10,7 @@ var chunkArray = ["test", "test"];
 var ctx;
 
 function setup() {
-    canvas = createCanvas(900, 600);
+    canvas = createCanvas(800, 600);
     ctx = canvas.drawingContext;
     canvas.parent("#tree");
     // background(150, 70, 70);
