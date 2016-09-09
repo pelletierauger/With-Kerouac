@@ -8,11 +8,14 @@ var mashIndex = 0;
 var mashDrawn = true;
 var chunkArray = ["test", "test"];
 var ctx;
+var parentTree;
 
 function setup() {
-    canvas = createCanvas(800, 600);
+    parentTree = select("#tree");
+    canvas = createCanvas(parentTree.width, parentTree.width * 3 / 4);
     ctx = canvas.drawingContext;
     canvas.parent("#tree");
+
     // background(150, 70, 70);
     background(50);
     noStroke();
@@ -23,6 +26,11 @@ function setup() {
     var mashButton = select('#mashButton')
     mashButton.mouseClicked(mash);
     textOutput = select("#output");
+}
+
+function windowResized() {
+    resizeCanvas(parentTree.width, parentTree.width * 3 / 4);
+    mashDrawn = false;
 }
 
 function pickString(text) {
@@ -47,6 +55,7 @@ function mash() {
 }
 
 function draw() {
+    console.log(parentTree.width);
     translate(width / 2, height);
     if (!mashDrawn) {
         console.log("Drawing the mash!");
