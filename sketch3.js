@@ -1,16 +1,15 @@
-var textOutput;
-var textSplit;
-var canvas;
-var mashDrawn = true;
+var textOutput, textSplit;
+var canvas, ctx, canvasContainer;
+var cutupDrawn = true;
 var chunkArray = ["test", "test"];
-var ctx;
-var parentTree;
-var leftColumn;
 
 function setup() {
-    parentTree = select("#tree");
-    leftColumn = select("#leftColumn");
-    canvas = createCanvas(parentTree.width, min(1200, windowHeight * 0.85));
+    canvasContainer = select("#tree");
+    if (windowWidth < 1000) {
+        canvas = createCanvas(canvasContainer.width, windowHeight * 0.85);
+    } else {
+        canvas = createCanvas(canvasContainer.width - 351, windowHeight * 0.85);
+    }
     ctx = canvas.drawingContext;
     canvas.parent("#tree");
     background(50, 30, 0);
@@ -19,24 +18,29 @@ function setup() {
     textFont("'Sorts Mill Goudy', 'Baskerville', Georgia, serif");
     textSize(25);
     loadStrings('sounds-in-the-woods.txt', pickString);
-    var mashButton = select('#mashButton')
-    mashButton.mouseClicked(mash);
+    var cutupButton = select('#cutupButton')
+    cutupButton.mouseClicked(cutup);
     textOutput = select("#output");
 }
 
 function windowResized() {
-    resizeCanvas(parentTree.width, min(1200, windowHeight * 0.85));
-    mashDrawn = false;
+    canvasContainer = select("#tree");
+    if (windowWidth < 1000) {
+        canvas = resizeCanvas(canvasContainer.width, windowHeight * 0.85);
+    } else {
+        canvas = resizeCanvas(canvasContainer.width - 351, windowHeight * 0.85);
+    }
+    cutupDrawn = false;
 }
 
 function pickString(text) {
     text = join(text, ' ');
     var delimiters = " —";
     textSplit = splitTokens(text, delimiters);
-    mash();
+    cutup();
 }
 
-function mash() {
+function cutup() {
     var chunks = "";
     chunkArray = [];
     for (var i = 0; i < 25; i++) {
@@ -45,11 +49,11 @@ function mash() {
         chunkArray.push(chunk);
     }
     textOutput.html(chunks);
-    mashDrawn = false;
+    cutupDrawn = false;
 }
 
 function draw() {
-    if (!mashDrawn) {
+    if (!cutupDrawn) {
         translate(width / 2, height);
         var gradient = ctx.createLinearGradient(0, -height, 0, 0);
         gradient.addColorStop(0, "rgba(70,60,30,255)");
@@ -68,7 +72,7 @@ function draw() {
             hyp: 50,
             text: chunkArray
         });
-        mashDrawn = true;
+        cutupDrawn = true;
     }
 }
 
