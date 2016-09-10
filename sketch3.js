@@ -8,11 +8,7 @@ function setup() {
     if (windowWidth < 1000) {
         canvas = createCanvas(canvasContainer.width, windowHeight * 0.85);
     } else {
-        if (deviceOrientation !== "landscape") {
-            canvas = createCanvas(canvasContainer.width - 351, windowHeight * 0.85);
-        } else {
-            canvas = createCanvas(canvasContainer.width - 351, windowHeight * 0.85 * 2);
-        }
+        canvas = createCanvas(canvasContainer.width - 351, windowHeight * 0.85);
     }
     ctx = canvas.drawingContext;
     canvas.parent("#tree");
@@ -32,11 +28,7 @@ function windowResized() {
     if (windowWidth < 1000) {
         canvas = resizeCanvas(canvasContainer.width, windowHeight * 0.85);
     } else {
-        if (deviceOrientation !== "landscape") {
-            canvas = resizeCanvas(canvasContainer.width - 351, windowHeight * 0.85);
-        } else {
-            canvas = resizeCanvas(canvasContainer.width - 351, windowHeight * 0.85 * 2);
-        }
+        canvas = resizeCanvas(canvasContainer.width - 351, windowHeight * 0.85);
     }
     cutupDrawn = false;
 }
