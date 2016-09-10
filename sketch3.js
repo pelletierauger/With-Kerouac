@@ -60,7 +60,7 @@ function draw() {
         gradient.addColorStop(1, "rgba(50,30,0,255)");
         ctx.fillStyle = gradient;
         rect(-width / 2, -height, width, height);
-        if (windowWidth < 1000 && deviceOrientation == "landscape") {
+        if (windowWidth < 1000 && deviceOrientation == "portrait") {
             scale(width / 900 * 2, width / 900 * 2);
         } else {
             scale(width / 900, width / 900);
