@@ -51,7 +51,7 @@ function mash() {
 function draw() {
     if (!mashDrawn) {
         translate(width / 2, height);
-        if (width < 1000) {
+        if (windowWidth < 1000) {
             scale(width / 900 * 2, width / 900 * 2);
         } else {
             scale(width / 900, width / 900);
