@@ -24,7 +24,7 @@ h1 {
     float: left;
 }
 
-@media handheld and (min-width: 0px) {
+@media screen and (min-width: 0px) {
     #wrapper {
         font-size: 2em;
     }
@@ -33,18 +33,6 @@ h1 {
     }
     #leftColumn {
         font-size: 2em;
-    }
-}
-
-@media screen and (min-width: 0px) {
-    #wrapper {
-        font-size: 1em;
-    }
-    h1 {
-        font-size: 2em;
-    }
-    #leftColumn {
-        font-size: 1em;
         width: 100%;
         margin-bottom: 1em;
     }
