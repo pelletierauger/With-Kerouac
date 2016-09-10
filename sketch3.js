@@ -105,6 +105,12 @@ function recursiveTree(branch) {
     }
     if (branch.hyp > 15 && random(0, 1) < 0.7) {
         newText.shift();
+        // var branching = random(-0.9, 0.9);
+        // if (branching < 0) {
+        //     branching = min(branching, -0.5);
+        // } else {
+        //     branching = max(branching, 0.5);
+        // }
         recursiveTree({
             pos: createVector(newX, newY),
             angle: branch.angle + random(-0.9, 0.9),
