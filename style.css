@@ -24,7 +24,7 @@ h1 {
     float: left;
 }
 
-@media screen and (min-width: 0px) {
+@media handheld and (min-width: 0px) {
     #wrapper {
         font-size: 2em;
     }
@@ -51,6 +51,9 @@ h1 {
         width: 325px;
         margin-right: 25px;
     }
+}
+
+@media screen and (min-width: 1000px) and (min-height: 600px) {
     #footer {
         position: absolute;
         bottom: 3%;

@@ -18,7 +18,7 @@ function setup() {
     textFont("'Sorts Mill Goudy', 'Baskerville', Georgia, serif");
     textSize(25);
     loadStrings('sounds-in-the-woods.txt', pickString);
-    var cutupButton = select('#cutupButton')
+    var cutupButton = select('#cutupButton');
     cutupButton.mouseClicked(cutup);
     textOutput = select("#output");
 }
