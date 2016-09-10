@@ -1,10 +1,6 @@
-var textInput;
 var textOutput;
-var mashed;
 var textSplit;
 var canvas;
-var currentMash = "";
-var mashIndex = 0;
 var mashDrawn = true;
 var chunkArray = ["test", "test"];
 var ctx;
@@ -14,14 +10,10 @@ var leftColumn;
 function setup() {
     parentTree = select("#tree");
     leftColumn = select("#leftColumn");
-
-    // canvas = createCanvas(parentTree.width, parentTree.width * 9 / 16);
     canvas = createCanvas(parentTree.width, min(1200, windowHeight * 0.85));
     ctx = canvas.drawingContext;
     canvas.parent("#tree");
-
-    // background(150, 70, 70);
-    background(70, 50, 50);
+    background(50, 30, 0);
     noStroke();
     fill(235, 235, 150);
     textFont("'Sorts Mill Goudy', 'Baskerville', Georgia, serif");
@@ -33,7 +25,6 @@ function setup() {
 }
 
 function windowResized() {
-    // resizeCanvas(parentTree.width, parentTree.width * 9 / 16);
     resizeCanvas(parentTree.width, min(1200, windowHeight * 0.85));
     mashDrawn = false;
 }
@@ -54,24 +45,17 @@ function mash() {
         chunkArray.push(chunk);
     }
     textOutput.html(chunks);
-    currentMash = chunks;
     mashDrawn = false;
-    // console.log("mashDrawn is now false!");
 }
 
 function draw() {
-    console.log(parentTree.width);
-    translate(width / 2, height);
     if (!mashDrawn) {
-        // console.log("Drawing the mash!");
-        // var gradient = ctx.createLinearGradient(0, -height, 0, 0);
-        // gradient.addColorStop(0, "rgba(180,80,30,255)");
-        // gradient.addColorStop(1, "rgba(130,0,30,255)");
-        // ctx.fillStyle = gradient;
-        // rect(-width / 2, -height, width, height);
-        // fill(235, 235, 150);
-        // background(30, 60, 90);
-        background(70, 50, 50);
+        translate(width / 2, height);
+        var gradient = ctx.createLinearGradient(0, -height, 0, 0);
+        gradient.addColorStop(0, "rgba(70,60,30,255)");
+        gradient.addColorStop(1, "rgba(50,30,0,255)");
+        ctx.fillStyle = gradient;
+        rect(-width / 2, -height, width, height);
         recursiveTree({
             pos: createVector(0, 0),
             angle: PI / 2 * 3,
@@ -85,24 +69,20 @@ function draw() {
 function recursiveTree(branch) {
     push();
     translate(branch.pos.x, branch.pos.y);
-    // ellipse(0, 0, 5, 5);
-    // text(branch.text.length, 0, 0);
     rotate(branch.angle);
     textSize(branch.hyp / 2);
-    fill(235, 235, 150);
     if (branch.hyp < 20) {
         fill(floor(random(200, 255)), floor(random(0, 255)), 0);
+    } else {
+        fill(235, 235, 150);
     }
     if (branch.text[0]) {
         text(branch.text[0], 0, 0);
     }
     pop();
-    // var newX = branch.pos.x + cos(branch.angle) * branch.hyp;
-    // var newY = branch.pos.y + sin(branch.angle) * branch.hyp;
     var newX = branch.pos.x + cos(branch.angle) * branch.text[0].length * branch.hyp * 0.25;
     var newY = branch.pos.y + sin(branch.angle) * branch.text[0].length * branch.hyp * 0.25;
     var newText = branch.text.slice();
-
     newText.shift();
 
     if (branch.hyp > 15) {
@@ -121,14 +101,5 @@ function recursiveTree(branch) {
             hyp: branch.hyp * 0.9,
             text: newText
         });
-    }
-}
-
-function gotFile(file) {
-    if (file.type === 'text') {
-        console.log(file);
-        // var formattedText = join(file.data, ' ');
-        // textInput.html(formattedText);
-        textOutput.html(file.data);
     }
 }

@@ -59,20 +59,8 @@ canvas {
         display: block;
         float: left;
         width: 100%;
+        max-width: 2000px;
         /*background: red;*/
-    }
-    #buttoncontainer {
-        width: 100%;
-        display: block;
-        /*position: relative;*/
-        /*margin: 0 auto 2em auto;*/
-        /*float: center;*/
-        background: #8CC5B6;
-        /* top: 0;
- left: 0;
- bottom: 0;
- right: 0;
-*/
     }
 }
 
@@ -99,20 +87,13 @@ canvas {
         display: block;
         float: left;
         width: 78%;
+        max-width: 2000px;
         /*background: red;*/
     }
-    #buttoncontainer {
-        /*width: 30%;*/
-        display: block;
-        position: relative;
-        margin: 0 auto;
-        /*float: center;*/
-        background: #8CC5B6;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-    }
+}
+
+h1 {
+    text-align: center;
 }
 
 #selfdocumenting {
@@ -121,11 +102,14 @@ canvas {
     width: 100%;
     margin-top: 1em;
     /*padding-right: 5em;*/
+    /*background: red;*/
+    text-align: center;
+    /*position: relative;*/
 }
 
 #output {
     font-size: 1.25em;
-    padding-right: 1em;
+    /*padding-right: 1em;*/
     padding-bottom: 1em;
     border-bottom: solid 2px #000;
     text-align: center;
@@ -137,16 +121,18 @@ canvas {
     float: left;
     width: 100%;
     font-size: 1em;
-    padding-right: 5em;
+    /*padding-right: 5em;*/
     margin-bottom: 1em;
+    text-align: left;
 }
 
 #mashButton {
     display: inline-block;
     font-size: 1.5em;
-    /*float: left;*/
-    background: #C54558;
+    background: #D74B21;
     padding: 10px 20px;
+    /*position: absolute;*/
+    /*bottom: 0;*/
     color: #fff;
     border: solid 2px #000000;
     cursor: pointer;
