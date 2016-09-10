@@ -51,7 +51,11 @@ function mash() {
 function draw() {
     if (!mashDrawn) {
         translate(width / 2, height);
-        scale(width / 900, width / 900);
+        if (width < 1000) {
+            scale(width / 900 * 2, width / 900 * 2);
+        } else {
+            scale(width / 900, width / 900);
+        }
         var gradient = ctx.createLinearGradient(0, -height, 0, 0);
         gradient.addColorStop(0, "rgba(70,60,30,255)");
         gradient.addColorStop(1, "rgba(50,30,0,255)");
