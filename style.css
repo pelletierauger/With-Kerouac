@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-size: 16px;
 }
 
 #wrapper {
@@ -25,14 +26,14 @@ h1 {
 }
 
 @media screen and (min-width: 0px) {
-    #wrapper {
+    /*    #wrapper {
         font-size: 2em;
-    }
+    }*/
     h1 {
-        font-size: 4em;
+        font-size: 200%;
     }
     #leftColumn {
-        font-size: 2em;
+        /*font-size: 2em;*/
         width: 100%;
         margin-bottom: 1em;
     }
@@ -40,14 +41,14 @@ h1 {
 }
 
 @media screen and (min-width: 1000px) {
-    #wrapper {
+    /*    #wrapper {
         font-size: 1em;
-    }
-    h1 {
+    }*/
+    /*    h1 {
         font-size: 2em;
-    }
+    }*/
     #leftColumn {
-        font-size: 1em;
+        /*        font-size: 1em;*/
         width: 325px;
         margin-right: 25px;
     }
@@ -69,7 +70,7 @@ h1 {
 }
 
 #output {
-    font-size: 1.25em;
+    font-size: 125%;
     padding-bottom: 1em;
     border-bottom: solid 2px #000;
     text-align: center;
@@ -93,7 +94,7 @@ h1 {
 
 #cutupButton {
     display: inline-block;
-    font-size: 1.5em;
+    font-size: 150%;
     background: #D74B21;
     margin-bottom: 1em;
     padding: 10px 20px;
