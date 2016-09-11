@@ -35,7 +35,7 @@ h1 {
     }
 }
 
-@media screen and (min-width: 1000px) and (min-height: 600px) {
+@media screen and (min-width: 1000px) and (min-height: 650px) {
     #footer {
         position: absolute;
         bottom: 3%;
@@ -55,7 +55,6 @@ h1 {
     padding: 1em 1em;
     border-top: solid 2px #000;
     border-bottom: solid 2px #000;
-
     text-align: center;
     background: #FFF082;
 }
@@ -80,7 +79,7 @@ h1 {
     display: inline-block;
     font-size: 150%;
     background: #D74B21;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     padding: 10px 20px;
     color: #fff;
     border: solid 2px #000000;
